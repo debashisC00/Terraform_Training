@@ -13,4 +13,9 @@ Name="debashis-gateway"
 }
 }
 
+resource "aws_route" "debashis-route" {
+        destination_cidr_block = "0.0.0.0/0"
+        gateway_id = "${aws_internet_gateway.debashis-gateway.id}"
+        route_table_id = "${aws_vpc.debashis-vpc.main_route_table_id}"
+}
 
