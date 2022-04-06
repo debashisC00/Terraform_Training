@@ -6,3 +6,11 @@ Name="debashis-vpc"
 }
 }
 
+resource "aws_internet_gateway" "debashis-gateway" {
+vpc_id = "${aws_vpc.pavan-vpc.id}"
+tags = {
+Name="debashis-gateway"
+}
+}
+
+
