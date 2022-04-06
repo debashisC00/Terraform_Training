@@ -7,7 +7,7 @@ Name="debashis-vpc"
 }
 
 resource "aws_internet_gateway" "debashis-gateway" {
-vpc_id = "${aws_vpc.pavan-vpc.id}"
+vpc_id = "${aws_vpc.debashis-vpc.id}"
 tags = {
 Name="debashis-gateway"
 }
